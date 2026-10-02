@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Essentials | Lifestyle, Travel & Home</title>
+  <meta name="description" content="Sculptural everyday objects and curated gifts, engineered with architectural precision. Urban Essentials — Lifestyle, Travel, Home." />
+  <link rel="icon" type="image/png" href="/images/brand/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#241a16',
+            parchment: '#f4f0e8',
+            muted: '#a69686',
+            border: '#c9c2b8',
+            gold: '#b89b6a',
+            goldLight: '#dfc08a',
+            rust: '#b5402f',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #f4f0e8; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .logo-mark {
+      display: inline-block;
+      background-color: currentColor;
+      -webkit-mask-image: url(/images/brand/monogram-dark.png);
+      mask-image: url(/images/brand/monogram-dark.png);
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+    }
+    #toast { transition: opacity 0.3s ease, transform 0.3s ease; }
+  </style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-parchment/95 backdrop-blur-md border-b border-border py-4">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <a href="#top" class="group flex items-center gap-3 shrink-0">
+        <span class="logo-mark w-6 h-7 text-ink group-hover:text-gold transition-colors"></span>
+        <div class="flex flex-col justify-center">
+          <span class="whitespace-nowrap text-lg md:text-xl font-light tracking-[0.26em] uppercase leading-tight font-serif text-ink group-hover:text-gold transition-colors">
+            Urban Essentials
+          </span>
+          <span class="hidden sm:block whitespace-nowrap text-[9px] uppercase tracking-[0.32em] leading-tight font-medium mt-0.5 text-[#8c7e73]">
+            Lifestyle &nbsp;|&nbsp; Travel &nbsp;|&nbsp; Home
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-9 text-xs uppercase tracking-widest font-medium text-ink">
+        <a href="#top-sellers" class="hover:text-gold transition-colors">Top Sellers</a>
+        <a href="#featured-gifts" class="hover:text-gold transition-colors">Featured Gifts</a>
+        <a href="#testimonials" class="hover:text-gold transition-colors">Reviews</a>
+        <a href="#footer" class="hover:text-gold transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button onclick="showToast('This is a demo preview — the full store launches soon.')" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-ink text-parchment text-xs uppercase tracking-widest font-medium hover:bg-[#3a2c24] transition-colors cursor-pointer">
+          Shop Now
+        </button>
+        <button id="mobileMenuBtn" class="md:hidden w-9 h-9 flex items-center justify-center text-ink" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-border bg-parchment">
+      <nav class="flex flex-col px-6 py-4 gap-4 text-xs uppercase tracking-widest font-medium text-ink">
+        <a href="#top-sellers" class="hover:text-gold transition-colors">Top Sellers</a>
+        <a href="#featured-gifts" class="hover:text-gold transition-colors">Featured Gifts</a>
+        <a href="#testimonials" class="hover:text-gold transition-colors">Reviews</a>
+        <a href="#footer" class="hover:text-gold transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/showroom/showroom_facade.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/50 to-ink/85"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto reveal in">
+      <span class="logo-mark w-16 h-20 text-parchment mx-auto mb-6" style="display:block;"></span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-light tracking-[0.1em] uppercase text-parchment mb-4">
+        Urban Essentials
+      </h1>
+      <p class="text-sm sm:text-base uppercase tracking-[0.35em] text-parchment/80 font-medium mb-8">
+        Lifestyle &nbsp;|&nbsp; Travel &nbsp;|&nbsp; Home
+      </p>
+      <p class="text-base sm:text-lg text-parchment/90 font-light leading-relaxed mb-10 max-w-xl mx-auto">
+        Sculptural everyday objects and curated gifts, engineered with architectural precision and presented in keepsake unboxing rituals.
+      </p>
+      <a href="#top-sellers" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-parchment text-ink text-xs uppercase tracking-widest font-medium hover:bg-gold hover:text-ink transition-all duration-300 shadow-lg">
+        Explore the Collection
+      </a>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-parchment/70 text-[10px] uppercase tracking-[0.3em] z-10">
+      Scroll to Explore
+    </div>
+  </section>
+
+  <!-- Top Sellers -->
+  <section id="top-sellers" class="py-20 sm:py-28 px-6 md:px-12 bg-parchment">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-14 reveal">
+        <span class="text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">Best Loved</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-ink tracking-[0.02em] mt-2">Top Sellers</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <!-- Coffee Cup -->
+        <div class="reveal group flex flex-col rounded-2xl bg-white border border-border hover:border-gold overflow-hidden transition-colors">
+          <div class="relative aspect-square overflow-hidden bg-[#e8e1d4]">
+            <img src="/images/products/hero/coffee-cup-stone-cream.png" alt="The Coffee Cup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3 py-1 text-[10px] uppercase tracking-widest bg-rust text-white rounded-full shadow-sm font-semibold">Save 23%</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-3">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-gold font-semibold mb-1">Signature Hero</p>
+              <h3 class="text-sm font-medium text-ink tracking-tight">The Coffee Cup</h3>
+              <p class="text-xs text-muted mt-0.5">1.4L Vacuum Insulated Carry Mug</p>
+              <p class="mt-2">
+                <span class="text-lg font-serif font-semibold text-ink">₹1,349</span>
+                <span class="text-sm font-serif text-muted line-through font-light ml-1.5">₹1,749</span>
+              </p>
+            </div>
+            <button onclick="showToast('Demo preview — add to cart is disabled here.')" class="w-full py-2.5 rounded-full bg-ink hover:bg-[#3a2c24] text-parchment text-[10px] uppercase tracking-widest font-medium transition-colors cursor-pointer">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Heritage Flask -->
+        <div class="reveal group flex flex-col rounded-2xl bg-white border border-border hover:border-gold overflow-hidden transition-colors">
+          <div class="relative aspect-square overflow-hidden bg-[#e8e1d4]">
+            <img src="/images/products/catalog/flask-butterfly.jpg" alt="Heritage Enamel Vacuum Flask" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3 py-1 text-[10px] uppercase tracking-widest bg-rust text-white rounded-full shadow-sm font-semibold">Save 21%</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-3">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-gold font-semibold mb-1">Hand-Finished</p>
+              <h3 class="text-sm font-medium text-ink tracking-tight">Heritage Enamel Vacuum Flask</h3>
+              <p class="text-xs text-muted mt-0.5">Hand-Painted Keepsake, 300ml</p>
+              <p class="mt-2">
+                <span class="text-lg font-serif font-semibold text-ink">₹1,099</span>
+                <span class="text-sm font-serif text-muted line-through font-light ml-1.5">₹1,399</span>
+              </p>
+            </div>
+            <button onclick="showToast('Demo preview — add to cart is disabled here.')" class="w-full py-2.5 rounded-full bg-ink hover:bg-[#3a2c24] text-parchment text-[10px] uppercase tracking-widest font-medium transition-colors cursor-pointer">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Petite Thermos -->
+        <div class="reveal group flex flex-col rounded-2xl bg-white border border-border hover:border-gold overflow-hidden transition-colors">
+          <div class="relative aspect-square overflow-hidden bg-[#e8e1d4]">
+            <img src="/images/products/catalog/thermos-ivory.jpg" alt="Petite Milk Thermos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3 py-1 text-[10px] uppercase tracking-widest bg-rust text-white rounded-full shadow-sm font-semibold">Save 20%</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-3">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-gold font-semibold mb-1">Pocket Size</p>
+              <h3 class="text-sm font-medium text-ink tracking-tight">Petite Milk Thermos</h3>
+              <p class="text-xs text-muted mt-0.5">Wrist Strap Flask, 280ml</p>
+              <p class="mt-2">
+                <span class="text-lg font-serif font-semibold text-ink">₹799</span>
+                <span class="text-sm font-serif text-muted line-through font-light ml-1.5">₹999</span>
+              </p>
+            </div>
+            <button onclick="showToast('Demo preview — add to cart is disabled here.')" class="w-full py-2.5 rounded-full bg-ink hover:bg-[#3a2c24] text-parchment text-[10px] uppercase tracking-widest font-medium transition-colors cursor-pointer">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Rabbit Jar -->
+        <div class="reveal group flex flex-col rounded-2xl bg-white border border-border hover:border-gold overflow-hidden transition-colors">
+          <div class="relative aspect-square overflow-hidden bg-[#e8e1d4]">
+            <img src="/images/products/catalog/jar-rosewater.jpg" alt="Rabbit-Ear Glass Jar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-4 left-4 px-3 py-1 text-[10px] uppercase tracking-widest bg-rust text-white rounded-full shadow-sm font-semibold">Save 24%</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between gap-3">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-gold font-semibold mb-1">Editorial Favorite</p>
+              <h3 class="text-sm font-medium text-ink tracking-tight">Rabbit-Ear Glass Jar</h3>
+              <p class="text-xs text-muted mt-0.5">Borosilicate Glass Tumbler, 350ml</p>
+              <p class="mt-2">
+                <span class="text-lg font-serif font-semibold text-ink">₹649</span>
+                <span class="text-sm font-serif text-muted line-through font-light ml-1.5">₹849</span>
+              </p>
+            </div>
+            <button onclick="showToast('Demo preview — add to cart is disabled here.')" class="w-full py-2.5 rounded-full bg-ink hover:bg-[#3a2c24] text-parchment text-[10px] uppercase tracking-widest font-medium transition-colors cursor-pointer">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Gifts -->
+  <section id="featured-gifts" class="py-20 sm:py-28 px-6 md:px-12 bg-[#ede6da] border-y border-border">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-14 reveal">
+        <span class="text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">Gift Them Well</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-ink tracking-[0.02em] mt-2">Featured Gifts</h2>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="featuredGiftsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="relative py-20 sm:py-24 px-6 md:px-12 bg-[#ede6da] text-ink border-y border-border">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-14 reveal">
+        <span class="text-[11px] uppercase tracking-[0.32em] text-gold font-medium block">In Their Words</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-ink tracking-[0.02em] mt-2">Loved By Our Customers</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <figure class="reveal flex flex-col justify-between rounded-3xl bg-white border border-border p-7 sm:p-8 shadow-[0_4px_16px_rgba(40,30,20,0.04)]">
+          <div>
+            <div class="flex items-center gap-1 mb-4">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+            </div>
+            <blockquote class="text-sm sm:text-base font-light text-[#3a2c24] leading-relaxed">
+              &ldquo;The packaging alone felt like a gift. Everything about the unboxing was considered, right down to the note card.&rdquo;
+            </blockquote>
+          </div>
+          <figcaption class="mt-6 pt-4 border-t border-[#ede6da] text-xs uppercase tracking-widest text-muted font-medium">
+            Ananya R. <span class="text-muted font-light normal-case tracking-normal">— Mumbai</span>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal flex flex-col justify-between rounded-3xl bg-white border border-border p-7 sm:p-8 shadow-[0_4px_16px_rgba(40,30,20,0.04)]">
+          <div>
+            <div class="flex items-center gap-1 mb-4">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+            </div>
+            <blockquote class="text-sm sm:text-base font-light text-[#3a2c24] leading-relaxed">
+              &ldquo;Ordered a set as a housewarming gift and ended up buying a second for myself. The finish quality is hard to find at this price.&rdquo;
+            </blockquote>
+          </div>
+          <figcaption class="mt-6 pt-4 border-t border-[#ede6da] text-xs uppercase tracking-widest text-muted font-medium">
+            Karthik M. <span class="text-muted font-light normal-case tracking-normal">— Bengaluru</span>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal flex flex-col justify-between rounded-3xl bg-white border border-border p-7 sm:p-8 shadow-[0_4px_16px_rgba(40,30,20,0.04)]">
+          <div>
+            <div class="flex items-center gap-1 mb-4">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-gold" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+              <svg viewBox="0 0 20 20" class="w-4 h-4 text-border" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7L10 1.5z"/></svg>
+            </div>
+            <blockquote class="text-sm sm:text-base font-light text-[#3a2c24] leading-relaxed">
+              &ldquo;Quick delivery, and the tumbler genuinely keeps drinks cold through a full workday. Exactly as described.&rdquo;
+            </blockquote>
+          </div>
+          <figcaption class="mt-6 pt-4 border-t border-[#ede6da] text-xs uppercase tracking-widest text-muted font-medium">
+            Priya S. <span class="text-muted font-light normal-case tracking-normal">— Delhi</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="relative py-20 px-6 md:px-12 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/showroom/dusk_plaza_backdrop.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-ink/80"></div>
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center reveal">
+      <h2 class="text-3xl sm:text-4xl font-serif font-light text-parchment mb-4">Thoughtful Gifts. Made Memorable.</h2>
+      <p class="text-sm sm:text-base text-parchment/80 font-light mb-8">
+        Every order arrives in a rigid matte box with gold-foil stamping and a hand wax-sealed note.
+      </p>
+      <button onclick="showToast('This is a demo preview — the full store launches soon.')" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-parchment text-ink text-xs uppercase tracking-widest font-medium hover:bg-gold transition-all duration-300 cursor-pointer">
+        Explore the Collection
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-border text-ink pt-16 pb-10 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-border/60">
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-2.5">
+            <span class="logo-mark w-4 h-5 text-ink"></span>
+            <h3 class="text-xl font-serif tracking-[0.2em] uppercase text-ink font-medium">Urban Essentials</h3>
+          </div>
+          <p class="text-sm text-[#5c534c] font-light leading-relaxed max-w-sm">
+            Thoughtful gifts. Made memorable. Sculptural everyday objects engineered with architectural precision and presented in keepsake unboxing rituals.
+          </p>
+          <div class="pt-2 text-xs uppercase tracking-widest text-[#786d62] font-medium">
+            Lifestyle &nbsp;|&nbsp; Travel &nbsp;|&nbsp; Home
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs uppercase tracking-[0.2em] text-ink font-semibold">Shop</h4>
+          <ul class="space-y-2 text-xs text-[#5c534c]">
+            <li><a href="#top-sellers" class="hover:text-ink transition-colors">Top Sellers</a></li>
+            <li><a href="#featured-gifts" class="hover:text-ink transition-colors">Featured Gifts</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs uppercase tracking-[0.2em] text-ink font-semibold">Stay in the Loop</h4>
+          <p class="text-xs text-[#5c534c] mb-2">Be the first to hear about new arrivals and private releases.</p>
+          <form id="newsletterForm" class="flex gap-2">
+            <input type="email" required placeholder="Enter your email" class="flex-1 min-w-0 text-sm bg-parchment border border-border rounded-lg px-3 py-2.5 text-ink placeholder-muted focus:outline-none focus:border-ink transition" />
+            <button type="submit" class="shrink-0 w-10 h-10 rounded-lg bg-ink hover:bg-[#3a2c24] text-parchment flex items-center justify-center transition-colors cursor-pointer" aria-label="Subscribe">
+              <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10h12M11 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+          <p id="newsletterMsg" class="hidden text-xs text-gold mt-1">Thanks — you're on the list.</p>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-[11px] text-[#786d62]">© <span id="year"></span> Urban Essentials. All rights reserved.</p>
+        <p class="text-[11px] text-[#786d62] uppercase tracking-widest">Demo Preview Build</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-full bg-ink text-parchment text-xs font-medium shadow-xl opacity-0 pointer-events-none translate-y-4">
+    Message
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach((a) =>
+      a.addEventListener('click', () => mobileMenu.classList.add('hidden'))
+    );
+
+    // Toast
+    let toastTimer;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-4');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2600);
+    }
+
+    // Newsletter fake-submit
+    document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('newsletterMsg').classList.remove('hidden');
+      e.target.reset();
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      {threshold: 0.15}
+    );
+    revealEls.forEach((el) => io.observe(el));
+
+    // Featured Gifts data (static demo data)
+    const FEATURED_GIFTS = [
+      {
+        title: 'Character Water Bottle',
+        tagline: 'Playful Animal-Print Bottle, Five Designs',
+        image: '/images/products/new/character-bottle-elephant.jpg',
+        price: 399,
+        originalPrice: 599,
+        discount: 33,
+      },
+      {
+        title: 'Crystal Rotating Glass',
+        tagline: 'Faceted Decorative Glass, Rotating LED Base',
+        image: '/images/products/new/crystal-rotating-glass.jpg',
+        price: 799,
+        originalPrice: 999,
+        discount: 20,
+      },
+      {
+        title: 'Amber Ribbed Glass Water Jug Set',
+        tagline: '1.4L Jug with 4 Matching 260ml Glasses',
+        image: '/images/products/new/amber-jug-set.jpg',
+        price: 1099,
+        originalPrice: 1399,
+        discount: 21,
+      },
+      {
+        title: 'The Everyday Tumbler',
+        tagline: '1200ml Steel Tumbler with Handle & Straw',
+        image: '/images/products/new/everyday-tumbler-black.jpg',
+        price: 799,
+        originalPrice: 1299,
+        discount: 38,
+      },
+      {
+        title: 'Bear Glass Cup',
+        tagline: '3D Teddy Bear Cup with Hat Lid & Straw',
+        image: '/images/products/new/bear-glass-cup.jpg',
+        price: 649,
+        originalPrice: 849,
+        discount: 24,
+      },
+      {
+        title: 'Decorative LED Lantern',
+        tagline: 'Vintage-Style Lantern with Flameless Candle',
+        image: '/images/products/new/led-lantern.jpg',
+        price: 599,
+        originalPrice: 999,
+        discount: 40,
+      },
+    ];
+
+    const grid = document.getElementById('featuredGiftsGrid');
+    grid.innerHTML = FEATURED_GIFTS.map(
+      (p) => `
+      <div class="reveal group flex flex-col rounded-2xl bg-white border border-border hover:border-gold overflow-hidden transition-colors">
+        <div class="relative aspect-square overflow-hidden bg-[#e8e1d4]">
+          <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-4 left-4 px-3 py-1 text-[10px] uppercase tracking-widest bg-rust text-white rounded-full shadow-sm font-semibold">Save ${p.discount}%</span>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between gap-3">
+          <div>
+            <h3 class="text-sm font-medium text-ink tracking-tight">${p.title}</h3>
+            <p class="text-xs text-muted mt-0.5">${p.tagline}</p>
+            <p class="mt-2">
+              <span class="text-lg font-serif font-semibold text-ink">₹${p.price.toLocaleString('en-IN')}</span>
+              <span class="text-sm font-serif text-muted line-through font-light ml-1.5">₹${p.originalPrice.toLocaleString('en-IN')}</span>
+            </p>
+          </div>
+          <button onclick="showToast('Demo preview — add to cart is disabled here.')" class="w-full py-2.5 rounded-full bg-ink hover:bg-[#3a2c24] text-parchment text-[10px] uppercase tracking-widest font-medium transition-colors cursor-pointer">Add to Cart</button>
+        </div>
+      </div>`
+    ).join('');
+    grid.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
